@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+  <h1>My Projects</h1>
+<br>
+<hr>
+
+<img class="" src="{% static 'main/coffee.jpg' %}" width="300" height="200" alt="">
+    {% for project in projects.all %}
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.description}}</p>
+    <br>
+  {% endfor %}
+  {% endblock %}
